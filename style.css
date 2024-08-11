@@ -1,0 +1,1609 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100%;
+  text-align: center;
+  background-color: rgb(153, 153, 198);
+}
+
+.main-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+.navbar {
+  width: 100%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar .logo h1 img {
+  height: 64px;
+  margin-top: 10px;
+  margin-left: 20px;
+  cursor: pointer;
+}
+
+.navbar .search-cities {
+  position: relative;
+}
+
+.navbar .search-cities .fa-magnifying-glass {
+  position: absolute;
+  left: 30px;
+  top: 10px;
+  cursor: pointer;
+}
+
+.navbar .search-cities input {
+  background-color: #c4c4c4;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+  display: flex;
+  font-size: 15px;
+  margin-right: 50px;
+  padding: 0 1px 0 60px;
+  height: 34px;
+  width: 290px;
+  border-radius: 10px;
+}
+
+.main-container .welcome-container {
+  text-align: start;
+  margin-top: -10px;
+  margin-left: -390px;
+}
+
+.main-container .welcome-container h1 {
+  font-size: 32px;
+  color: wheat;
+}
+.main-container .welcome-container p {
+  color: azure;
+  margin-top: 20px;
+  margin-left: 10px;
+  font-size: 21px;
+}
+
+.main-container .invalid-search-para {
+  display: none;
+  margin-top: 260px;
+  color: red;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.main-container .empty-input-search-para {
+  display: none;
+  margin-top: 260px;
+  color: yellow;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.main-container .display-container {
+  height: 610px;
+  width: 610px;
+  border-radius: 20px;
+  display: none;
+  flex-direction: column;
+  gap: 30px;
+  box-shadow: 10px 10px 10px rgb(30, 42, 42);
+  position: relative;
+}
+
+.main-container .display-container h2 {
+  margin-top: 50px;
+  color: wheat;
+  font-weight: bolder;
+  font-size: 45px;
+  /* text-shadow: 6px 6px 4px  rgb(132, 121, 102); */
+  text-shadow: 6px 6px 4px rgb(134, 120, 96);
+}
+
+.display-container .temp-in-celsius-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.temp-in-celsius-container .weather-icons {
+  margin-right: -6px;
+  margin-top: -30px;
+  height: 95px;
+  width: 95px;
+}
+
+.temp-in-celsius-container .temp-in-celsius-para {
+  font-size: 40px;
+  color: white;
+  font-weight: bolder;
+}
+
+.temp-in-celsius-container .celsius {
+  color: white;
+  font-weight: bolder;
+  margin-left: 3px;
+  margin-top: 2px;
+}
+
+.temp-in-celsius-container .sub {
+  font-size: 26px;
+  color: white;
+  margin-top: 13px;
+  margin-left: -7px;
+}
+
+.display-container .day-night {
+  font-weight: bold;
+  position: absolute;
+  left: 20px;
+  top: 242px;
+}
+
+.display-container .weather-condition-para {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-top: -18px;
+  border-bottom: 1px solid rgba(112, 87, 87, 0.15);
+  padding: 10px 0 12px;
+  border-width: 5px;
+}
+
+.display-container .date {
+  position: absolute;
+  left: 476px;
+  top: 243px;
+  font-weight: bold;
+}
+.display-container .weather-further-data-container {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+}
+
+.display-container
+  .weather-further-data-container
+  .weather-further-data-inner-container {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 200px;
+  padding: 12px 0;
+}
+
+.display-container
+  .weather-further-data-container
+  .weather-further-data-inner-container
+  .label {
+  font-size: 16px;
+}
+
+.display-container
+  .weather-further-data-container
+  .weather-further-data-inner-container
+  .value {
+  color: white;
+}
+
+/* NOW RESPONSIVE */
+
+@media (max-width: 400px) {
+  .main-container {
+    width: 100%;
+  }
+
+  .navbar .logo h1 img {
+    height: 40px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 18px;
+    top: 7px;
+  }
+
+  .navbar .search-cities input {
+    font-size: 12px;
+    margin-right: 10px;
+    padding: 0 1px 0 45px;
+    height: 30px;
+    width: 175px;
+  }
+
+  .main-container .welcome-container {
+    text-align: center;
+    margin-top: 190px;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+  .main-container .welcome-container h1 {
+    font-size: 20px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 12px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 220px;
+    font-size: 28px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 220px;
+    font-size: 26px;
+  }
+
+  .main-container .display-container {
+    margin-top: 2px;
+    height: 480px;
+    width: 340px;
+    gap: 30px;
+    box-shadow: 1px 12px 10px rgb(30, 42, 42);
+  }
+
+  .main-container .display-container h2 {
+    /* margin-top: 40px; */
+    margin-top: 50px;
+    font-size: 28px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 2px;
+    margin-top: -20px;
+    height: 60px;
+    width: 60px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 6px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 24px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 13px;
+    margin-top: 9px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    left: 10px;
+    top: 177px;
+    font-size: 12px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 13px;
+    margin-top: -22px;
+    margin-left: -4px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 12px;
+    left: 244px;
+    top: 178px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container {
+    gap: 125px;
+    padding: 12px 0;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .label {
+    font-size: 12px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .value {
+    font-size: 12px;
+  }
+
+  .display-container .weather-further-data-container {
+    margin-top: 20px;
+  }
+}
+
+ 
+@media (min-width: 401px) and (max-width: 450px) {
+  .main-container {
+    width: 100%;
+  }
+
+  .navbar .logo h1 img {
+    height: 42px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 20px;
+    top: 7px;
+  }
+
+  .navbar .search-cities input {
+    font-size: 14px;
+    margin-right: 10px;
+    padding: 0 1px 0 45px;
+    height: 34px;
+    width: 200px;
+ }
+
+  .main-container .welcome-container {
+    text-align: center;
+    margin-top: 290px;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+  .main-container .welcome-container h1 {
+    font-size: 24px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 18px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 325px;
+    font-size: 30px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 325px;
+    font-size: 28px;
+  }
+
+  .main-container .display-container {
+    margin-top: 90px;
+    height: 500px;
+    width: 390px;
+    gap: 30px;
+    box-shadow: 1px 12px 10px rgb(30, 42, 42);
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 52px;
+    font-size: 30px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 2px;
+    margin-top: -25px;
+    height: 75px;
+    width: 75px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 10px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 28px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 15px;
+    margin-top: 10px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 14px;
+    left: 10px;
+    top: 198px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 16px;
+    margin-top: -20px;
+    margin-left: 2px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 14px;
+    left: 280px;
+    top: 200px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container {
+    gap: 155px;
+    padding: 13px 0;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .label {
+    font-size: 15px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .value {
+    font-size: 15px;
+  }
+
+  .display-container .weather-further-data-container {
+    margin-top: 20px;
+  }
+} 
+
+@media (min-width: 451px) and (max-width: 500px) {
+  .main-container {
+    width: 100%;
+  }
+
+  .navbar .logo h1 img {
+    height: 43px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 20px;
+    top: 9px;
+  }
+
+  .navbar .search-cities input {
+    font-size: 15px;
+    margin-right: 10px;
+    padding: 0 1px 0 45px;
+    height: 36px;
+    width: 220px;
+ }
+
+  .main-container .welcome-container {
+    text-align: center;
+    margin-top: 250px;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+  .main-container .welcome-container h1 {
+    font-size: 26px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 300px;
+    font-size: 34px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 300px;
+    font-size: 32px;
+  }
+
+  .main-container .display-container {
+    margin-top: 50px;
+    height: 530px;
+    width: 436px;
+    gap: 30px;
+    box-shadow: 1px 12px 10px rgb(30, 42, 42);
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 54px;
+    font-size: 32px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 2px;
+    margin-top: -28px;
+    height: 80px;
+    width: 80px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 20px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 32px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 16px;
+    margin-top: 13px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 16px;
+    left: 10px;
+    top: 220px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 18px;
+    margin-top: -16px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 16px;
+    left: 316px;
+    top: 221px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container {
+    gap: 160px;
+    padding: 15px 0;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .label {
+    font-size: 16px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .value {
+    font-size: 16px;
+  }
+
+  .display-container .weather-further-data-container {
+    margin-top: 20px;
+  }
+} 
+
+@media (min-width: 501px) and (max-width: 600px) {
+  .main-container {
+    width: 100%;
+  }
+
+  .navbar .logo h1 img {
+    height: 45px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 20px;
+    top: 10px;
+  }
+
+  .navbar .search-cities input {
+    font-size: 16px;
+    margin-right: 10px;
+    padding: 0 1px 0 45px;
+    height: 38px;
+    width: 240px;
+ }
+
+  .main-container .welcome-container {
+    text-align: center;
+    margin-top: 240px;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+  .main-container .welcome-container h1 {
+    font-size: 28px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 22px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 36px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 34px;
+  }
+
+  .main-container .display-container {
+    margin-top: 10px;
+    height: 600px;
+    width: 490px;
+    gap: 30px;
+    box-shadow: 1px 12px 10px rgb(30, 42, 42);
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 56px;
+    font-size: 32px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 2px;
+    margin-top: -26px;
+    height: 80px;
+    width: 80px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 34px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 16px;
+    margin-top: 15px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 17px;
+    left: 10px;
+    top: 226px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 19px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 17px;
+    left: 362px;
+    top: 228px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container {
+    gap: 165px;
+    padding: 16px 0;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .label {
+    font-size: 18px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .value {
+    font-size: 18px;
+  }
+
+  .display-container .weather-further-data-container {
+    margin-top: 30px;
+  }
+} 
+
+@media (min-width: 601px) and (max-width: 700px) {
+  .main-container {
+    width: 100%;
+  }
+
+  .navbar .logo h1 img {
+    height: 46px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 20px;
+    top: 11px;
+  }
+
+  .navbar .search-cities input {
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 0 1px 0 45px;
+    height: 40px;
+    width: 270px;
+ }
+
+  .main-container .welcome-container {
+    text-align: center;
+    margin-top: 230px;
+    margin-left: 2px;
+    margin-right: 5px;
+  }
+
+  .main-container .welcome-container h1 {
+    font-size: 30px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 23px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 36px;
+  }
+
+  .main-container .display-container {
+    height: 640px;
+    width: 590px;
+    gap: 30px;
+    box-shadow: 1px 12px 10px rgb(30, 42, 42);
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 34px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 236px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 452px;
+    top: 238px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container {
+    gap: 175px;
+    padding: 18px 0;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .label {
+    font-size: 20px;
+  }
+
+  .display-container
+    .weather-further-data-container
+    .weather-further-data-inner-container
+    .value {
+    font-size: 20px;
+  }
+
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 701px) and (max-width: 800px) {
+  .navbar .logo h1 img {
+    height: 48px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 20px;
+    top: 11px;
+  }
+
+  .navbar .search-cities input {
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 0 1px 0 50px;
+    height: 40px;
+    width: 300px;
+ }
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .main-container .welcome-container h1 {
+    font-size: 32px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 40px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .display-container{
+    margin-top: 60px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 801px) and (max-width: 900px) {
+  .navbar .logo h1 img {
+    height: 48px;
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 20px;
+    top: 11px;
+  }
+
+  .navbar .search-cities input {
+    font-size: 18px;
+    margin-right: 10px;
+    padding: 0 1px 0 50px;
+    height: 40px;
+    width: 300px;
+ }
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+
+  .main-container .welcome-container h1 {
+    font-size: 32px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 40px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .display-container{
+    margin-top: 30px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 901px) and (max-width: 1240px) {
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 100px;
+  }
+  
+  .main-container .welcome-container h1 {
+    font-size: 32px;
+    margin-left: 2px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 40px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .display-container{
+    margin-top: 30px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 1241px) and (max-width: 1260px) {
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 140px;
+  }
+  
+  .main-container .welcome-container h1 {
+    font-size: 32px;
+    margin-left: 2px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 40px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .display-container{
+    margin-top: 30px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 1261px) and (max-width: 1320px) {
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 165px;
+  }
+  
+  .main-container .welcome-container h1 {
+    font-size: 32px;
+    margin-left: 2px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 40px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .display-container{
+    margin-top: 30px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 1321px) and (max-width: 1370px) {
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 240px;
+  }
+  
+  .main-container .welcome-container h1 {
+    font-size: 32px;
+    margin-left: 2px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 40px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .display-container{
+    margin-top: 30px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 1371px) and (max-width: 1599px) {
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 460px;
+  }
+  
+  .main-container .welcome-container h1 {
+    font-size: 32px;
+    margin-left: 2px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 10px;
+    margin-left: 5px;
+    font-size: 20px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 290px;
+    font-size: 40px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 290px;
+    font-size: 38px;
+  }
+
+  .main-container .display-container{
+    margin-top: 30px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
+
+@media (min-width: 1900px) and (max-width: 3999px) {
+
+  .navbar .logo h1 img {
+    height: 68px;
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+  
+  .navbar .search-cities .fa-magnifying-glass {
+    left: 30px;
+    top: 8px;
+    font-size: 19px;
+  }
+  
+  .navbar .search-cities input {
+    font-size: 20px;
+    margin-right: 100px;
+    padding: 0 1px 0 65px;
+    height: 38px;
+    width: 300px;
+  }
+
+  .main-container .welcome-container {
+    margin-top: 10px;
+    margin-left: -130px;
+    /* margin-right: 100px; */
+  }
+  
+  .main-container .welcome-container h1 {
+    font-size: 45px;
+    margin-left: 2px;
+  }
+  .main-container .welcome-container p {
+    margin-top: 20px;
+    margin-left: 30px;
+    font-size: 28px;
+  }
+
+  .main-container .invalid-search-para {
+    margin-top: 390px;
+    font-size: 50px;
+  }
+
+  .main-container .empty-input-search-para {
+    margin-top: 390px;
+    font-size: 50px;
+  }
+
+  .main-container .display-container{
+    margin-top: 120px;
+  }
+
+  .main-container .display-container h2 {
+    margin-top: 58px;
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .weather-icons {
+    margin-right: 4px;
+    margin-top: -30px;
+    height: 90px;
+    width: 90px;
+  }
+  .display-container .temp-in-celsius-container {
+    margin-top: 25px;
+  }
+
+  .temp-in-celsius-container .temp-in-celsius-para {
+    font-size: 36px;
+  }
+
+  .temp-in-celsius-container .celsius {
+    margin-left: 3px;
+    margin-top: 2px;
+  }
+
+  .temp-in-celsius-container .sub {
+    font-size: 18px;
+    margin-top: 17px;
+    margin-left: -6px;
+  }
+
+  .display-container .day-night {
+    margin-left: 6px;
+    font-size: 18px;
+    left: 10px;
+    top: 240px;
+  }
+
+  .display-container .weather-condition-para {
+    font-size: 21px;
+    margin-top: -18px;
+    margin-left: 3px;
+    padding: 10px 0 12px;
+  }
+
+  .display-container .date {
+    font-size: 18px;
+    left: 464px;
+    top: 241px;
+  }
+  .display-container .weather-further-data-container {
+    margin-top: 40px;
+  }
+} 
