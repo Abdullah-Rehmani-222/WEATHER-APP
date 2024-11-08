@@ -18,7 +18,7 @@ let emptyInputSearch = document.getElementById("empty-input-search");
 async function getWeatherData(cityName) {
   try {
     let response = await fetch(
-     `http://api.weatherapi.com/v1/current.json?key=16ebb38bcc5a4ba4bec215814241108&q=${cityName}&aqi=yes`
+      `https://api.weatherapi.com/v1/current.json?key=16ebb38bcc5a4ba4bec215814241108&q=${cityName}&aqi=yes`
     );
     if (!response.ok) throw new Error("City not found");
     let data = await response.json();
